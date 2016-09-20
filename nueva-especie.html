@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="herbario" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Especie</title>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Bree+Serif|Dosis|Muli" rel="stylesheet">
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript" src="javascript/app.js"></script>
+    <header>
+            <h1>Nueva Especie</h1>
+    </header>
+    <section ng-controller="herbCtrl as herbario">
+        <form id="nueva-planta">
+            <div class="forma"><label for="especie">Especie: </label><br>
+            <input type="text" placeholder="Nombre de la Especie..." id="especie" required></div>
+            <div class="forma"><label for="clase">Clase: </label><br>
+                <input type="text" list="clases" placeholder="Clase de la Especie..." id="clase" required>
+                <datalist id="clases">
+                    <option value="hola"></option>
+                </datalist>
+            </div>
+            <div class="forma"><label for="division">División: </label><br>
+                <input type="text" placeholder="División de la Especie..." id="division" required></div>
+            <div class="forma"><label for="familia">Familia: </label><br>
+                <input type="text" placeholder="Familia de la Especie..." id="familia" required></div>
+            <div class="forma"><label for="genero">Género: </label><br>
+                <input type="text" placeholder="Género de la Especie..." id="genero" required></div>
+            <div class="subir_foto">
+                <label for="foto">Subir Foto</label>
+                <input id="foto" type="file">
+                <label for="sEtapa">Elija la etapa:</label><br>
+                <select id="sEtapa" name="etapa">
+                    <option value="semilla">Semilla</option>
+                    <option value="radicula">Radícula</option>
+                    <option value="plantula">Plántula</option>
+                    <option value="flor">Flor</option>
+                    <option value="fruto">Fruto</option>
+                </select>
+                <select id="sNivel" name="nivel">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select><br>
+            </div>
+            <footer>
+                <input type="submit" value="Agregar">
+                <button id="cancel">Cancelar</button>
+            </footer>
+        </form>
+        </div>
+    </section>
+    <footer id="pie">
+        <p>&copy Todos los derechos reservados para uso privado.</p>
+    </footer>
+</body>
+</html>
