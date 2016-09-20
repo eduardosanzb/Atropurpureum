@@ -6,8 +6,22 @@
     app.controller("herbCtrl", function($scope, $firebaseObject) {
         var ref = new Firebase("https://herbario-a575d.firebaseio.messages");
         $scope.baseH = $firebaseArray(ref);
-        $scope.addMessage = function() {
-            $scope.baseH.$add({});
+        $scope.addMessage = function(type) {
+            $scope.baseH.$add({BasicPckg.Especies.});
+            switch(baseH.BasicPckg.Especies.type){
+                case "Nombre":
+
+                    break;
+                case "Clase":
+
+                    break;
+                case "Familia":
+
+                    break;
+                case "Nombre":
+
+                    break;
+            }
         };
     });
 })();

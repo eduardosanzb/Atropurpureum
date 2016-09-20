@@ -13,13 +13,13 @@
     <header>
             <h1>Nueva Especie</h1>
     </header>
-    <section ng-controller="herbCtrl as herbario">
+    <section ng-controller="herbCtrl">
         <form id="nueva-planta">
             <div class="forma"><label for="especie">Especie: </label><br>
-            <input type="text" placeholder="Nombre de la Especie..." id="especie" required></div>
-            <div class="forma"><label for="clase">Clase: </label><br>
-                <input type="text" list="clases" placeholder="Clase de la Especie..." id="clase" required>
-                <datalist id="clases">
+            <input type="text" placeholder="Nombre de la Especie..." id="especie" required  ng-model="{{herbCtrl.ref.BasicPckg.Especies.Nombre}}"></div>
+            <div class="forma"><label for="clases">Clase: </label><br>
+                <input type="text" list="clases" placeholder="Clase de la Especie..."  required >
+                <datalist id="clases" ng-repeat="">
                     <option value="hola"></option>
                 </datalist>
             </div>
